@@ -1,0 +1,142 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* stylelint-disable */
+/* Keep reset CSS to one minified line */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* stylelint-enable */
+
+/* ===== BASE STYLES ===== */
+
+/*
+  Setting type to a major third modular scale
+  http://www.modularscale.com/?1&em&1.25&web&text
+*/
+
+html {
+  color: white;
+  background-color: #223843;
+  font-family: Depot New W00;
+  font-size: 1.125em; /* 18px */
+  line-height: 1.25em; /* 22.5px @ 18px em = 1 gridline */
+}
+
+body 
+{
+	background-image: url("background.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  padding-bottom: 1.25em;
+  margin: 0 auto;
+}
+
+div.ClearBox
+{
+	
+  background-color: black;
+  border: 0.056em solid black;
+  opacity:0.6;
+  width : 100%;
+  filter:alpha(opacity=70);
+  padding-top : 1.667em; /* 30 px */
+}
+
+div.ClearBox p
+{
+	margin: 1%;
+	font-weight: bold;
+  	color: #000000;
+  	color : red;
+  	font-size : 1.389em; /* 25 px */
+  	font-family: 'Lora', serif;
+}
+
+#map
+{
+  width:100%;
+  height:500px;
+}
+
+#navigation
+{
+	position:fixed;
+	top : 0;
+	width: 100%;
+	font-color: white;
+	height: 0.229em; /* 35 px */
+	text-align: center;
+	-webkit-box-shadow: 0em 0em 0.444em 0em #000000;
+	-moz-box-shadow: 0em 0em 0.444em 0em #000000;
+	box-shadow: 0em 0em 0.444em 0em #000000;
+	background-color: black;
+	color: rgba(1, 1, 1, 0.8);
+	opacity:0.8;
+
+}
+
+#navigation a 
+{
+font-size: 1.111em; /* 20px */
+padding-left: 0.833em; /* 15px */
+padding-right: 0.833em; /* 15px */
+color: red;
+text-decoration: none;
+font-family: 'Oxygen', sans-serif;
+}
+
+#navigation a:hover
+{
+	color: black;
+	background-color: #FAEBD7;
+
+}
+
+#navigation1
+{
+	position:bottom;
+	width: 100%;
+	font-color: white;
+	height: 1.944em; /* 35px */
+	text-align: center;
+	-webkit-box-shadow: 0em 0em 0.444em 0em #000000;
+	-moz-box-shadow: 0em 0em 0.444em 0em #000000;
+	box-shadow: 0em 0em 0.444em 0em #000000;
+	background-color: 	black;
+	color: rgba(1, 1, 1, 0.8);
+	opacity:0.8;
+
+}
+
+#navigation1 a 
+{
+font-size: 20px;
+padding-left: 15px;
+padding-right: 15px;
+color: red;
+text-decoration: none;
+font-family: 'Oxygen', sans-serif;
+}
+
+#navigation1 a:hover
+{
+	  background-color: gray;
+}
+
+#slides1
+{
+	margin: 5%;
+	background-color: white;
+	border: 5px solid black;
+}
+
+#box
+{
+
+}
+
