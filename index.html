@@ -9,16 +9,15 @@
 	<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 	<script src="https://use.fontawesome.com/95d4310702.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </head>
 <body>
 	<div class = "Background">
-	<script type="text/javascript" src="script.js"></script>
 	<div class = "ClearBox">
 			<p> WELCOME</p>
 	</div>
  
-
 <div id="navigation">
   <a href="index.html">Home</a>
 
@@ -51,35 +50,6 @@
 				</form>
 			</div>
 </div>
-
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("slides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-</script>
-
-<div id="map" ></div>
-<script>
-function myMap() {
-  var mapCanvas = document.getElementById("map");
-  var mapOptions = {
-    center: new google.maps.LatLng(51.5, -0.2),
-    zoom: 5
-  }
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-}
-</script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
 
