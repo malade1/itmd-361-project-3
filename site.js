@@ -47,7 +47,7 @@ function myMap() {
   }
   var map = new google.maps.Map(mapCanvas, mapOptions);
 });
-};
+});
 };
 
 
