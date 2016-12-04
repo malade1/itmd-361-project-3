@@ -1,57 +1,46 @@
-/**
- * On DOMReady initialize page functionality
- */
-$(document).ready(function(){
-
-    // Test we load this file
-    alert("READY!");
-
-    //Add functionality into the menu buttons
-    prepareMenu();
-
-function prepareMenu()
-{
-    $("#menu li").click(
-        function () {
-            $("#menu li").each(
-                function(){
-                    $(this).removeClass("active");
-                }
-            );
-            $(this).addClass("active");
-            HideFiles($(this).children().html());
-        return false;
-    });
-    //Select the first as default
-    $("#menu li:first").click();
-
-function carousel() {
-  var myIndex = 0;
-  carousel();
-    var i;
-    var x = document.getElementsByClassName("slides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-
-function myMap() {
-  var mapCanvas = document.getElementById("map");
-  var mapOptions = {
-    center: new google.maps.LatLng(51.5, -0.2),
-    zoom: 5
-  }
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-});
-});
-};
-
-
-
-
-
-
+$.noConflict();
+(function($) {
+  $(document).ready(function() {
+    $('#form').on('submit', function(event) {
+      event.preventDefault();
+      var pcode = $('#pcode').val();
+      // var clientKey = "js-9qZHzu2Flc59Eq5rx10JdKERovBlJp3TQ3ApyC4TOa3tA8U7aVRnFwf41RpLgtE7";
+      var api = 'http://api.zippopotam.us/US/' + pcode;
+      $.get(api).done(function(input, json) {
+        if (input != null) {
+          var city = input.[0]['place name'];
+          var state = input.places[0].state;
+          var lng = input.places[0].longitude;
+          var lat = input.places[0].latitude;
+          var latLng = new google.maps.LatLng(lat, lng);
+          var options = {
+            center: latLng,
+            zoom: 20,
+          };
+          var weaURL = 'http://api.wunderground.com/api/545fdc789bb2fa90/conditions/q/' + state + '/' + city + '.json';
+          $.get(weaURL, function(input, json) {
+            if (input != null) {
+              var temp = input.current_observation.temperature_string;
+              var String2 = temp;
+              $('#forecast').text(String2);
+            } else {
+              console.log('.error');
+              var form = document.getElementById("form");
+              form.reset();
+            }
+          })
+          var String1 = 'The weather in ' + city + ' , ' + state + ' is:'
+          $('#location').text(String1);
+          var map = new google.maps.Map(document.getElementById('map'), options);
+          var marker = new google.maps.Marker({
+            position: latLng,
+            map: map
+          });
+        } 
+      }).fail(function() {
+        $('.error').text('Invalid zip code!');
+        //$('#form').trigger("reset"); //tried to clear the error message
+      })
+    })
+  })
+})(jQuery);
