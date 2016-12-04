@@ -4,10 +4,11 @@ $.noConflict();
     $('#form').on('submit', function(event) {
       event.preventDefault();
       var pcode = $('#pcode').val();
+      // var clientKey = "js-9qZHzu2Flc59Eq5rx10JdKERovBlJp3TQ3ApyC4TOa3tA8U7aVRnFwf41RpLgtE7";
       var api = 'http://api.zippopotam.us/US/' + pcode;
       $.get(api).done(function(input, json) {
         if (input != null) {
-          var city = input.places[0]['place name'];
+          var city = input.[0]['place name'];
           var state = input.places[0].state;
           var lng = input.places[0].longitude;
           var lat = input.places[0].latitude;
