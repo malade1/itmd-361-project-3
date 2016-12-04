@@ -1,57 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Cars</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" media="screen" href="css/screen.css" />
+  <meta charset="utf-8">
+  <title>App</title>
+  <link href="css/screen.css" media="screen" rel="stylesheet">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,shirnk-to-fit=no" />
-	<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 	<script src="https://use.fontawesome.com/95d4310702.js"></script>
-	<script type="text/javascript" src="script.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+  </script> 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBy9ABXqjK2M1y60Y-T20butYMIcRx_Pgw">
+  </script> 
+  <script src="site.js">
+  </script>
 </head>
 <body>
-	<div class = "Background">
-	<div class = "ClearBox">
-			<p> WELCOME</p>
+  <h1>Weather by Zip-Code</h1>
+  <section id="form">
+    <form action="#null" id="form" method="get" name="form">
+      <label for="pcode">Zip Code:</label> <input id="pcode" name="pcode" type="text"> <span class="error"></span> 
+			<input id="form-submit" name="form-submit" type="submit" value="Search">
+    </form>
+    <p id="location"></p>
+    <p id="forecast"></p>
+  </section>
+  <div id="map"></div>
+	<div id="footer">
+		<footer>App made by Fahad &amp; Moses <a class="git" id="github" href="https://github.com/IIT-Fahad-Moses"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a></footer> 
 	</div>
- 
-<div id="navigation">
-  <a href="index.html">Home</a>
-
-</div>
-  <center>
-	<div id="slides1" class="slides1" style="max-width:500px">
-  <img class="slides" src="img/aventador.jpg" style="width:500px; height:500px;">
-  <img class="slides" src="img/gallardo.jpg" style="width:500px; height:500px;">
-  <img class="slides" src="img/ferrari.jpg" style="width:500px; height:500px;">
-  <img class="slides" src="img/corvette.jpg" style="width:500px; height:500px;">
-	</div>
-	</center>
-<div id="navigation1">
-  <a href="https://www.facebook.com"><img src="img/facebook.png" alt="Facebook Logo" style="width:30px;height:30px" align="center"></a>
-  <a href="https://www.instagram.com"><img src="img/instagram.png" alt="Instagram Logo" style="width:30px;height:30px" align="center"></a>
-</div>
-
-<div class="box">
-		<form>
-			<fieldset>
-					<legend>
-					<p>Get a quote:</p>
-					</legend>
-					<p1><label>First Name: <input type="text" name = "first_name_field"></label></p1>
-					<p1><label>Last Name: <input type="text" name="last_name_field"></label></p1>
-					<p1><label>Phone Number: <input type= "text" name="phone_field"></label><p1>
-					<p1><label>Vehicle: <input type= "text" name="vehicle_field"></label></p1>
-					</fieldset>
-					<input type="submit" value="Send Me">	
-				</form>
-			</div>
-</div>
-
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
-
 </body>
 </html>
