@@ -1,3 +1,6 @@
+/* Used the zippopotam api. This api uses .places[0] to parse data into json
+which is then passed onto the second api by wundergroud which displays the weather*/
+
 $.noConflict();
 (function($) {
   $(document).ready(function() {
@@ -8,7 +11,7 @@ $.noConflict();
       var api = 'http://api.zippopotam.us/US/' + pcode;
       $.get(api).done(function(input, json) {
         if (input != null) {
-          var city = input.[0]['place name'];
+          var city = input.places[0]['place name'];
           var state = input.places[0].state;
           var lng = input.places[0].longitude;
           var lat = input.places[0].latitude;
