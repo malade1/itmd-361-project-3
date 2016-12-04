@@ -1,6 +1,6 @@
 /* Used the zippopotam api. This api uses .places[0] to parse data into json
 which is then passed onto the second api by wundergroud which displays the weather*/
-
+//by Fahad and Moses
 $.noConflict();
 (function($) {
   $(document).ready(function() {
