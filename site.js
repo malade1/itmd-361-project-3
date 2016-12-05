@@ -1,6 +1,5 @@
 /* Used the zippopotam api. This api uses .places[0] to parse data into json
 which is then passed onto the second api by wundergroud which displays the weather*/
-
 $.noConflict();
 (function($) {
   $(document).ready(function() {
@@ -19,7 +18,7 @@ $.noConflict();
           var latLng = new google.maps.LatLng(lat, lng);
           var options = {
             center: latLng,
-            zoom: 20,
+            zoom: 15,
           }
           var weaURL = 'https://api.wunderground.com/api/545fdc789bb2fa90/conditions/q/' + state + '/' + city + '.json';
           $.get(weaURL, function(input, json) {
