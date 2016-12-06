@@ -80,7 +80,7 @@ h1 {
 }
 
 #page {
-  padding: 1.333em 0.916em; /* 16.5px */
+  padding: 1.222em; /* 16.5px */
 }
 
 #city {
@@ -124,45 +124,31 @@ h1 {
   color: red;
 }
 
-* Mobile Phone */
-@media screen and (min-width: 10em) and (max-width: 30em)
-{
-  body {
-    font-size: 0.876em;
-    width: 100%;
+@media screen and (min-width: 37.5em) {
+  #page {
+    padding-left: 14.833%;
+    padding-right: 14.833%;
   }
+}
 
-  header {
-    text-align: left;
-    margin-bottom: 1em;
+/* 840px @ 16px/em*/
+/* Based on a 12 column grid with 24px gutters*/
+@media screen and (min-width: 52.5em) {
+  #page {
+    padding-left: 19.048%;
+    padding-right: 19.0478%;
   }
+}
 
-  h1{
-    text-align: center;
-    font-size: 2.3em;
+/* 1440px @ 16px/em*/
+/* Based on a 12 column grid with 24px gutters*/
+@media screen and (min-width: 90em) {
+  #page {
+    padding-left: 26.25%;
+    padding-right: 26.25%;
   }
-  
-  #map {
-    width: 100%;
-    height: auto;
-  }
-  
-@media screen and (min-width: 30em) and (max-width: 60em)
-{
-  body {
-    font-size: 1em;
-    width: 100%;
-  }
+}
 
-  header {
-    text-align: center;
-    margin-bottom: 1em;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-  }
 
 
 
