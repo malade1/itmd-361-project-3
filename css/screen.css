@@ -49,8 +49,8 @@ table {
 */
 
 html {
-  color: white;
-  background-color: #223843;
+  color: DarkGoldenRod/*#DAA520*/;
+  background-color:#4682B4;
   font-family: Depot New W00;
   font-size: 1.125em;
   /* 18px */
@@ -107,22 +107,28 @@ h1 {
   margin-top: 1em;
   padding-top: 1em;
   padding-bottom: 1.222em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  background: #FFFACD;
   text-align: center;
 }
 
+#form-submit {
+  background: orange;
+}
+
 .git, footer, li {
-  color: white;
+  color: #DAA520;
   text-align: center;
   list-style-type: none;
   padding-bottom: 0.223em;
   padding-left: 0.223em;
+  padding-top: 0.223em;
 }
 
 .error {
   color: red;
 }
+
+/* Based on a 12 column grid with 24px gutters*/
 
 @media screen and (min-width: 37.5em) {
   #page {
@@ -131,8 +137,6 @@ h1 {
   }
 }
 
-/* 840px @ 16px/em*/
-/* Based on a 12 column grid with 24px gutters*/
 @media screen and (min-width: 52.5em) {
   #page {
     padding-left: 19.048%;
@@ -140,8 +144,6 @@ h1 {
   }
 }
 
-/* 1440px @ 16px/em*/
-/* Based on a 12 column grid with 24px gutters*/
 @media screen and (min-width: 90em) {
   #page {
     padding-left: 26.25%;
