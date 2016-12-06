@@ -58,6 +58,16 @@ html {
   /* 22.5px @ 18px em = 1 gridline */
 }
 
+header {
+  background: url(../img/header.jpg) #49311c;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: left;
+}
+
 h1 {
   font-size: 2.441em;
   /* 43.945px @ 18px em */
@@ -67,6 +77,10 @@ h1 {
   /* 22.5px @ 43.945px em */
   display: block;
   text-align: center;
+}
+
+#page {
+  padding: 1.333em 0.916em; /* 16.5px */
 }
 
 #city {
@@ -83,11 +97,20 @@ h1 {
   height: 500px;
 }
 
-#form, #location, #forecast {
-  padding-bottom: 0.112em;
-  padding-left: 0.223em;
+#location, #forecast {
+  padding-bottom: 1em;
+  padding-left: 1em;
+  text-align: center;
 }
 
+#form {
+  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1.222em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  text-align: center;
+}
 
 .git, footer, li {
   color: white;
