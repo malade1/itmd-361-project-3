@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>App</title>
+  <link href="css/screen.css" media="screen" rel="stylesheet">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,shirnk-to-fit=no"/>
+	<script src="https://use.fontawesome.com/95d4310702.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+  </script> 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBy9ABXqjK2M1y60Y-T20butYMIcRx_Pgw">
+  </script> 
+  <script src="site.js">
+  </script>
+</head>
+<body>
+<div id="page">
+<header>
+  <h1>Weather by Zip-Code</h1>
+</header>
+  <section id="form">
+    <form action="#null" id="form" method="get" name="form">
+      <label for="pcode">Zip Code:</label> <input id="pcode" name="pcode" type="text"> <span class="error"></span> 
+			<input id="form-submit" name="form-submit" type="submit" value="Search">
+    </form>
+    <p id="location"></p>
+    <p id="forecast"></p>
+  </section>
+  <div id="map"></div>
+	<div id="footer">
+	
+	</div>
+</div>
+</body>
+</html>
