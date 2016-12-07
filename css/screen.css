@@ -32,8 +32,6 @@ blockquote:after, blockquote:before, q:after, q:before {
   content: '';
   content: none
 }
-/*table */
-
 
 /* stylelint-enable */
 
@@ -149,8 +147,3 @@ h1 {
   }
 
 }
-
-
-
-
- 
